@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(94, 94, 94);
+  font-family: 'VT323', monospace;
+
+}
+
+.container {
+  height: 100vh;
+}
+
+img {
+  width: 200px;
+}
+
+.gamebox {
+  background: rgb(255, 255, 255);
+  border: solid 2px black;
+}
+
+.yourhealth {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bottombox {
+  border-top: solid 2px black;
+  
+}
+
+.bottomleft {
+  border-right: solid 2px black;
+  padding-bottom: 15px;
+}
+
+.bordertop {
+  border-top: solid 2px black;
+}
