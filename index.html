@@ -17,13 +17,13 @@
 		<div class="row">
 			<div class="col-12 col-md-8 offset-md-2 text-center gamebox">
 				<section class="row">
-					<div class="col-6">
+					<div class="col-6 px-5">
 						<h2>VULPIX</h2>
 						<div class="progress">
-							<div id="enemyhealth" class="progress-bar w-80" role="progressbar" style="width: 100%" aria-valuenow="100"
+							<div id="enemyhealth" class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
 								aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
-						<h3 id="vulpixHP">HP: 100/100</h3>
+						<h3 id="vulpixHP" class="mt-2">HP: 100/100</h3>
 					</div>
 					<div class="col-6">
 						<img id="vulpimg" class="mt-3" src="/vulpix-sprite.png" alt="">
@@ -33,10 +33,13 @@
 					<div class="col-6">
 						<img src="/pika-sprite.png" alt="">
 					</div>
-					<div class="col-6 pb-3 text-center yourhealth">
+					<div class="col-6 pb-3 px-5 text-center yourhealth">
 						<h2>PIKACHU</h2>
-						<progress id="myhealth" value="100" max="100"></progress>
-						<h3 id="pikaHP">HP: 100/100</h3>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+								aria-valuemax="100"></div>
+						</div>
+						<h3 id="pikaHP" class="mt-2">HP: 100/100</h3>
 					</div>
 				</section>
 				<section class="row bordertop">
@@ -96,6 +99,11 @@
 					</div>
 				</section>
 			</div>
+		</div>
+		<div class="row mx-auto">
+			<button type="button" class="btn btn-info mt-2 px-5" onclick="reset()">
+				<h5 class="mt-2">RESET</h5>
+			</button>
 		</div>
 	</section>
 	<script src="game.js"></script>

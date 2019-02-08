@@ -47,3 +47,11 @@ function draw() {
   document.getElementById("vulpixHP").innerText = `HP: ${health}/100`
   document.getElementById("enemyhealth").style = `width: ${health}%`
 }
+
+
+function reset() {
+  health = 100
+  document.getElementById("textresponse").innerText = `> `
+  document.getElementById("vulpimg").src = '/vulpix-sprite.png'
+  draw()
+}
