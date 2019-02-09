@@ -12,6 +12,7 @@ function enemyReact() {
     if (myHealth <= 0) {
       myHealth = 0
       document.getElementById("textresponse").innerText = `> PIKACHU has fainted!`
+      document.getElementById("controls").style.pointerEvents = 'none'
       draw()
     } else {
       document.getElementById("textresponse").innerText = `> VULPIX used EMBER!`
