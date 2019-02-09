@@ -8,16 +8,24 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="game.css">
 	<title>SlapGame</title>
 </head>
 
 <body>
-	<audio autoplay>
-		<source src="battle.mp3" type="audio/mpeg">
-		<p>If you can read this, your browser does not support the audio element.</p>
+	<iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+	<audio id="player" autoplay loop>
+		<source src="battle2.mp3" type="audio/mp3">
+	</audio>
+	<audio id="damage">
+		<source src="damage.mp3" type="audio/mp3">
 	</audio>
 	<section class="container d-flex flex-column justify-content-center">
+		<h5 class="text-center">
+			<i class="fas fa-volume-up"></i> / <i class="fas fa-volume-mute"></i>
+		</h5>
 		<div class="row">
 			<div class="col-12 col-md-8 offset-md-2 text-center gamebox">
 				<section class="row">

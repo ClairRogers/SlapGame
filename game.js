@@ -8,6 +8,7 @@ var atkPwr = 1
 function enemyReact() {
   setTimeout(function () {
     myHealth = myHealth - 20
+    damageSound()
     if (myHealth <= 0) {
       myHealth = 0
       document.getElementById("textresponse").innerText = `> PIKACHU has fainted!`
@@ -27,10 +28,13 @@ function enemyReact() {
 function thundershock() {
   if (atkPwr == 1) {
     health = health - 5
+    damageSound()
   } else if (atkPwr == 2) {
     health = health - 7
+    damageSound()
   } else if (atkPwr == 3) {
     health = health - 9
+    damageSound()
   }
   if (health < 1) {
     health = 0
@@ -48,10 +52,13 @@ function thundershock() {
 function quickAttack() {
   if (atkPwr == 1) {
     health = health - 10
+    damageSound()
   } else if (atkPwr == 2) {
     health = health - 14
+    damageSound()
   } else if (atkPwr == 3) {
     health = health - 18
+    damageSound()
   }
   if (health < 1) {
     health = 0
@@ -68,10 +75,13 @@ function quickAttack() {
 function thunderbolt() {
   if (atkPwr == 1) {
     health = health - 20
+    damageSound()
   } else if (atkPwr == 2) {
     health = health - 30
+    damageSound()
   } else if (atkPwr == 3) {
     health = health - 40
+    damageSound()
   }
   if (health < 1) {
     health = 0
@@ -123,6 +133,11 @@ function candy() {
   }
   enemyReact()
   draw()
+}
+
+function damageSound() {
+  var sound = document.getElementById("damage");
+  sound.play()
 }
 
 
