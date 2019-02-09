@@ -59,7 +59,7 @@ function thunderbolt() {
 
 function pokeball() {
   if (health <= 25) {
-    document.getElementById("vulpimg").src = '/pokeball-sprite.png'
+    document.getElementById("vulpimg").src = 'pokeball-sprite.png'
     document.getElementById("controls").style.pointerEvents = 'none'
     document.getElementById("textresponse").innerText = `> VULPIX has been caught!`
   } else {
@@ -71,6 +71,7 @@ function pokeball() {
 
 function potion() {
   myHealth = myHealth + 30
+  document.getElementById("textresponse").innerText = `> POTION restored 30 HP!`
   if (myHealth >= 100) {
     myHealth = 100
   }
