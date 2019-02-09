@@ -141,6 +141,7 @@ function damageSound() {
 }
 
 
+
 function draw() {
   document.getElementById("vulpixHP").innerText = `HP: ${health}/100`
   document.getElementById("enemyhealth").style = `width: ${health}%`
