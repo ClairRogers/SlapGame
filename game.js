@@ -141,7 +141,6 @@ function damageSound() {
 }
 
 
-
 function draw() {
   document.getElementById("vulpixHP").innerText = `HP: ${health}/100`
   document.getElementById("enemyhealth").style = `width: ${health}%`
@@ -153,6 +152,7 @@ function draw() {
 function reset() {
   health = 100
   myHealth = 100
+  atkPwr = 1
   document.getElementById("textresponse").innerText = `> `
   document.getElementById("vulpimg").src = 'vulpix-sprite.png'
   document.getElementById("controls").style.pointerEvents = 'all'
