@@ -109,6 +109,7 @@ function pokeball() {
 
 function potion() {
   myHealth = myHealth + 30
+  itemSound()
   document.getElementById("textresponse").innerText = `> POTION restored 30 HP!`
   if (myHealth >= 100) {
     myHealth = 100
@@ -119,6 +120,7 @@ function potion() {
 
 function fullRestore() {
   myHealth = 100
+  itemSound()
   document.getElementById("textresponse").innerText = `> FULL RESTORE restored HP!`
   enemyReact()
   draw()
@@ -127,6 +129,7 @@ function fullRestore() {
 function candy() {
   if (atkPwr < 3) {
     atkPwr++
+    itemSound()
     document.getElementById("textresponse").innerText = `> PIKACHU's ATTACK rose!`
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU's ATTACK cannot go higher!`
@@ -137,6 +140,11 @@ function candy() {
 
 function damageSound() {
   var sound = document.getElementById("damage");
+  sound.play()
+}
+
+function itemSound() {
+  var sound = document.getElementById("useitem");
   sound.play()
 }
 
