@@ -2,58 +2,86 @@
 
 var health = 100
 var myHealth = 100
+var atkPwr = 1
 
 
 function enemyReact() {
   setTimeout(function () {
     myHealth = myHealth - 20
-    document.getElementById("textresponse").innerText = `> VULPIX used EMBER!`
-    draw()
+    if (myHealth <= 0) {
+      myHealth = 0
+      document.getElementById("textresponse").innerText = `> PIKACHU has fainted!`
+      draw()
+    } else {
+      document.getElementById("textresponse").innerText = `> VULPIX used EMBER!`
+      setTimeout(function () {
+        document.getElementById("textresponse").innerText = `> `
+        document.getElementById("controls").style.pointerEvents = 'all'
+      }, 1500);
+      draw()
+    }
   }, 1500);
-  setTimeout(function () {
-    document.getElementById("textresponse").innerText = `> `
-    document.getElementById("controls").style.pointerEvents = 'all'
-  }, 3000);
 }
 
 
 function thundershock() {
-  health = health - 5
+  if (atkPwr == 1) {
+    health = health - 5
+  } else if (atkPwr == 2) {
+    health = health - 7
+  } else if (atkPwr == 3) {
+    health = health - 9
+  }
   if (health < 1) {
     health = 0
     document.getElementById("textresponse").innerText = `> VULPIX has fainted!`
+    document.getElementById("controls").style.pointerEvents = 'none'
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU used THUNDERSHOCK!`
     document.getElementById("controls").style.pointerEvents = 'none'
+    enemyReact()
   }
-  enemyReact()
   draw()
 }
 
 
 function quickAttack() {
-  health = health - 10
+  if (atkPwr == 1) {
+    health = health - 10
+  } else if (atkPwr == 2) {
+    health = health - 14
+  } else if (atkPwr == 3) {
+    health = health - 18
+  }
   if (health < 1) {
     health = 0
     document.getElementById("textresponse").innerText = `> VULPIX has fainted!`
+    document.getElementById("controls").style.pointerEvents = 'none'
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU used QUICK ATTACK!`
     document.getElementById("controls").style.pointerEvents = 'none'
+    enemyReact()
   }
-  enemyReact()
   draw()
 }
 
 function thunderbolt() {
-  health = health - 20
+  if (atkPwr == 1) {
+    health = health - 20
+  } else if (atkPwr == 2) {
+    health = health - 30
+  } else if (atkPwr == 3) {
+    health = health - 40
+  }
   if (health < 1) {
     health = 0
     document.getElementById("textresponse").innerText = `> VULPIX has fainted!`
+    document.getElementById("controls").style.pointerEvents = 'none'
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU used THUNDERBOLT!`
     document.getElementById("controls").style.pointerEvents = 'none'
+    enemyReact()
   }
-  enemyReact()
   draw()
 }
 
@@ -74,6 +102,24 @@ function potion() {
   document.getElementById("textresponse").innerText = `> POTION restored 30 HP!`
   if (myHealth >= 100) {
     myHealth = 100
+  }
+  enemyReact()
+  draw()
+}
+
+function fullRestore() {
+  myHealth = 100
+  document.getElementById("textresponse").innerText = `> FULL RESTORE restored HP!`
+  enemyReact()
+  draw()
+}
+
+function candy() {
+  if (atkPwr < 3) {
+    atkPwr++
+    document.getElementById("textresponse").innerText = `> PIKACHU's ATTACK rose!`
+  } else {
+    document.getElementById("textresponse").innerText = `> PIKACHU's ATTACK cannot go higher!`
   }
   enemyReact()
   draw()
