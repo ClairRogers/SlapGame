@@ -92,7 +92,7 @@ function reset() {
   health = 100
   myHealth = 100
   document.getElementById("textresponse").innerText = `> `
-  document.getElementById("vulpimg").src = '/vulpix-sprite.png'
+  document.getElementById("vulpimg").src = 'vulpix-sprite.png'
   document.getElementById("controls").style.pointerEvents = 'all'
   draw()
 }
