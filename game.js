@@ -24,7 +24,7 @@ function thundershock() {
     document.getElementById("textresponse").innerText = `> VULPIX has fainted!`
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU used THUNDERSHOCK!`
-    //document.getElementById("controls").style.pointerEvents = 'none'
+    document.getElementById("controls").style.pointerEvents = 'none'
   }
   enemyReact()
   draw()
@@ -38,7 +38,7 @@ function quickAttack() {
     document.getElementById("textresponse").innerText = `> VULPIX has fainted!`
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU used QUICK ATTACK!`
-    //document.getElementById("controls").style.pointerEvents = 'none'
+    document.getElementById("controls").style.pointerEvents = 'none'
   }
   enemyReact()
   draw()
@@ -51,7 +51,7 @@ function thunderbolt() {
     document.getElementById("textresponse").innerText = `> VULPIX has fainted!`
   } else {
     document.getElementById("textresponse").innerText = `> PIKACHU used THUNDERBOLT!`
-    //document.getElementById("controls").style.pointerEvents = 'none'
+    document.getElementById("controls").style.pointerEvents = 'none'
   }
   enemyReact()
   draw()
@@ -70,7 +70,7 @@ function pokeball() {
 }
 
 function potion() {
-  myHealth = myHealth + 25
+  myHealth = myHealth + 30
   if (myHealth >= 100) {
     myHealth = 100
   }

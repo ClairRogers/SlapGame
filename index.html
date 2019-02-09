@@ -13,11 +13,15 @@
 </head>
 
 <body>
+	<audio autoplay>
+		<source src="battle.mp3" type="audio/mpeg">
+		<p>If you can read this, your browser does not support the audio element.</p>
+	</audio>
 	<section class="container d-flex flex-column justify-content-center">
 		<div class="row">
 			<div class="col-12 col-md-8 offset-md-2 text-center gamebox">
 				<section class="row">
-					<div class="col-6 px-5">
+					<div class="col-6 px-5 mt-4">
 						<h2>VULPIX</h2>
 						<div class="progress">
 							<div id="enemyhealth" class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
@@ -36,8 +40,8 @@
 					<div class="col-6 pb-3 px-5 text-center yourhealth">
 						<h2>PIKACHU</h2>
 						<div class="progress">
-							<div id="myhealth" class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-								aria-valuemax="100"></div>
+							<div id="myhealth" class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
+								aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 						<h3 id="pikaHP" class="mt-2">HP: 100/100</h3>
 					</div>
