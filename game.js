@@ -7,7 +7,11 @@ var atkPwr = 1
 
 function enemyReact() {
   setTimeout(function () {
-    myHealth = myHealth - 20
+    myHealth = myHealth - Math.floor(Math.random() * 35) + 5;
+    document.getElementById("pikaimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("pikaimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
     if (myHealth <= 0) {
       myHealth = 0
@@ -29,12 +33,24 @@ function enemyReact() {
 function thundershock() {
   if (atkPwr == 1) {
     health = health - 5
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   } else if (atkPwr == 2) {
     health = health - 7
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   } else if (atkPwr == 3) {
     health = health - 9
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   }
   if (health < 1) {
@@ -53,12 +69,24 @@ function thundershock() {
 function quickAttack() {
   if (atkPwr == 1) {
     health = health - 10
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   } else if (atkPwr == 2) {
     health = health - 14
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   } else if (atkPwr == 3) {
     health = health - 18
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   }
   if (health < 1) {
@@ -76,12 +104,24 @@ function quickAttack() {
 function thunderbolt() {
   if (atkPwr == 1) {
     health = health - 20
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   } else if (atkPwr == 2) {
     health = health - 30
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   } else if (atkPwr == 3) {
     health = health - 40
+    document.getElementById("vulpimg").setAttribute('style', 'opacity: 0')
+    setTimeout(function () {
+      document.getElementById("vulpimg").setAttribute('style', 'opacity: 1')
+    }, 200);
     damageSound()
   }
   if (health < 1) {
@@ -100,7 +140,7 @@ function pokeball() {
   if (health <= 25) {
     document.getElementById("vulpimg").src = 'pokeball-sprite.png'
     document.getElementById("controls").style.pointerEvents = 'none'
-    document.getElementById("textresponse").innerText = `> VULPIX has been caught!`
+    document.getElementById("textresponse").innerText = `> Congratulations! VULPIX has been caught!`
   } else {
     document.getElementById("textresponse").innerText = `> VULPIX is still too strong!`
     enemyReact()
