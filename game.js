@@ -7,7 +7,7 @@ var atkPwr = 1
 
 function enemyReact() {
   setTimeout(function () {
-    myHealth = myHealth - Math.floor(Math.random() * 35) + 5;
+    myHealth = myHealth - (Math.floor(Math.random() * 25) + 10);
     document.getElementById("pikaimg").setAttribute('style', 'opacity: 0')
     setTimeout(function () {
       document.getElementById("pikaimg").setAttribute('style', 'opacity: 1')
@@ -195,6 +195,12 @@ function draw() {
   document.getElementById("enemyhealth").style = `width: ${health}%`
   document.getElementById("pikaHP").innerText = `HP: ${myHealth}/100`
   document.getElementById("myhealth").style = `width: ${myHealth}%`
+  if (health <= 20) {
+    document.getElementById("enemyhealth").class = `progress-bar bg-danger`
+  }
+  if (myHealth <= 20) {
+    document.getElementById("myhealth").class = `progress-bar bg-danger`
+  }
 }
 
 
